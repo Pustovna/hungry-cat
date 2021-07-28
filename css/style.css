@@ -295,6 +295,7 @@ button:hover {
   padding: 0 20px 37px;
   margin-left: auto;
   user-select: none;
+  max-height: 518px;
 }
 
 .refr__title {

@@ -1,8 +1,8 @@
 import Refrigerator from "./refr.js";
 
 const dragAndDrop = () => {
-  const cardsList = document.querySelector(".cards__list");
-  const cards = cardsList.querySelectorAll(".card__img");
+  // const cardsList = document.querySelector(".cards__list");
+  const cards = document.querySelectorAll(".card__img");
   const refr = document.querySelector(".refr");
   const food = refr.querySelectorAll(".empty");
 
