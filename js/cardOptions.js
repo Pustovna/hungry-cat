@@ -21,6 +21,14 @@ const cardOptions = () => {
       }
     };
   });
+
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(item => {
+    const acts = item.querySelectorAll('.price')
+    item.dataset.totalSt = +acts[0].textContent + +acts[1].textContent;
+    item.dataset.totalMs = +acts[2].textContent + +acts[3].textContent;
+  })
 };
 
 export default cardOptions;

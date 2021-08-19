@@ -255,33 +255,21 @@ button:hover {
 
 .sort {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   font-size: 14px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 20px;
   max-width: 650px;
+  color: rgba(0, 18, 66, 0.5);
 }
 
 .sort__button {
-  color: #001242;
   text-decoration: none;
+  color: rgba(0, 18, 66, 0.5);
   position: relative;
-}
-
-.sort__button::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -20px;
-  border: 5px solid transparent;
-  border-top-color: #001242;
-  border-bottom: 0;
-}
-
-.sort__list {
-  display: none;
+  background-color: transparent;
+  border: none;
 }
 
 /* colors */
