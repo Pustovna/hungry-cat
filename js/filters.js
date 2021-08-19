@@ -3,7 +3,17 @@ const filters = function(group, cards) {
     
 
     groupButtons.forEach((item) => {
-        item.addEventListener('click', () => {
+        item.addEventListener('click', (e) => {
+            const target = e.target;
+            const buttons = target.parentNode.children; 
+            
+            for (let button of buttons) {
+                if(button.classList.contains('active')) {
+                    button.classList.remove('active');
+                }
+            }
+            
+            target.classList.add('active');
             const type = item.dataset.group; 
             if (cards === '.cards__container') { 
                 filterGroup(type);

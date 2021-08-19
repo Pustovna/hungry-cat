@@ -2,8 +2,16 @@ const sort = () => {
   const sortButton = document.querySelectorAll(".sort__button");
 
   sortButton.forEach((element, index) => {
-    element.addEventListener("click", function () {
+    element.addEventListener("click", function(e) {
+        const target = e.target; 
       if (index % 2 != 0) {
+        const buttonsList = target.parentNode.querySelectorAll('.sort__button');
+        buttonsList.forEach(item => { 
+            if(item.classList.contains('active')) {
+                item.classList.remove('active');
+            }
+        })
+        target.classList.add('active');
         const cards = element
           .closest(".cards__wrapper")
           .querySelectorAll(".card");
@@ -20,6 +28,13 @@ const sort = () => {
           }
         });
       } else {
+        const buttonsList = target.parentNode.querySelectorAll('.sort__button');
+        buttonsList.forEach(item => { 
+            if(item.classList.contains('active')) {
+                item.classList.remove('active');
+            }
+        })
+        target.classList.add('active');
         const cards = element
           .closest(".cards__wrapper")
           .querySelectorAll(".card");

@@ -91,7 +91,10 @@
         cursor: pointer
         margin-right: 5px
         margin-bottom: 10px
-        
+        &.active
+            color: $filter-text
+            background-color: $filter-back
+
 .sort
     display: flex
     justify-content: flex-start
@@ -105,14 +108,8 @@
         text-decoration: none
         color: $sort-text
         position: relative
-        background-color: transparent
-        border: none
-        // &::after
-        //     content: ''
-        //     position: absolute
-        //     top: 50%
-        //     transform: translateY(-50%)
-        //     right: -20px
-        //     border: 5px solid transparent
-        //     border-top-color: $sort-text
-        //     border-bottom: 0
+        cursor: pointer
+        margin-left: 10px
+        margin-right: 10px
+        &.active
+            border-bottom: 1px dashed $sort-text

@@ -141,6 +141,11 @@ button:hover {
   color: rgba(0, 18, 66, 0.5);
 }
 
+.menu__item.active {
+  color: #001242;
+  text-decoration: underline;
+}
+
 /* colors */
 /* ------------ */
 .cards__container {
@@ -253,6 +258,11 @@ button:hover {
   margin-bottom: 10px;
 }
 
+.filter__item.active {
+  color: #ffffff;
+  background-color: #001242;
+}
+
 .sort {
   display: flex;
   justify-content: flex-start;
@@ -268,8 +278,13 @@ button:hover {
   text-decoration: none;
   color: rgba(0, 18, 66, 0.5);
   position: relative;
-  background-color: transparent;
-  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.sort__button.active {
+  border-bottom: 1px dashed rgba(0, 18, 66, 0.5);
 }
 
 /* colors */
