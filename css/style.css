@@ -178,7 +178,7 @@ button:hover {
   background-color: #2A8DCB;
   color: #ffffff;
   animation: modalUp;
-  animation-duration: 2000ms;
+  animation-duration: 1000ms;
   animation-fill-mode: forwards;
   display: flex;
   flex-direction: column;

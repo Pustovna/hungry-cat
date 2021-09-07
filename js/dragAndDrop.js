@@ -39,7 +39,7 @@ const dragAndDrop = () => {
         newCard.style.visibility = "hidden";
         let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
         newCard.style.visibility = "visible";
-
+      
         if (!elemBelow) return;
 
         // let droppableBelow = elemBelow.querySelector('.empty');
@@ -48,11 +48,11 @@ const dragAndDrop = () => {
           food.forEach((item) => {
             item.style.backgroundColor = "";
           });
-
           elemBelow.style.backgroundColor = "#0080003b";
-        } else {
-          elemBelow.style.backgroundColor = "";
-        }
+        } 
+        // else {
+        //   // elemBelow.style.backgroundColor = "";
+        // }
         // if (currentDroppable != droppableBelow) {
         //     // if (currentDroppable) {
         //     //     // логика обработки процесса "вылета" из droppable (удаляем подсветку)
@@ -92,6 +92,9 @@ const dragAndDrop = () => {
                 svg.dataset.mess);
           });
         } else {
+          food.forEach((item) => {
+            item.style.backgroundColor = "";
+          });
           newCard.style.display = "none";
         }
 

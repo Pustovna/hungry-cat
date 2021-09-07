@@ -32,7 +32,14 @@ const filters = function(group, cards) {
             })
         } else {
             allCards.forEach(item => {
-                if (item.dataset.group == typeValue) {
+                const group = item.dataset.group.split(' ');
+                if (group.length > 1) {
+                    if (group.includes(typeValue)) {
+                        item.style.display = "block"; 
+                    } else {
+                        item.style.display = "none"; 
+                    }
+                } else if (item.dataset.group == typeValue) {
                     item.style.display = "block";
                 } else {
                     item.style.display = "none";
