@@ -126,6 +126,14 @@ button:hover {
 /* ------------ */
 .header__wrapper {
   padding: 40px 103px 33px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .header__wrapper {
+    padding: 40px 51.5px 33px;
+  }
 }
 
 .logo__wrapper {
@@ -150,6 +158,66 @@ button:hover {
   flex-wrap: wrap;
   position: relative;
   max-width: 1500px;
+  margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .main__wrapper {
+    padding: 0 51.5px;
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 20vh;
+  padding: 20px;
+  max-width: 400px;
+  z-index: 1000;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #2A8DCB;
+  color: #ffffff;
+  animation: modalUp;
+  animation-duration: 2000ms;
+  animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__text {
+  font-size: 30px;
+  text-align: center;
+}
+
+.modal__button {
+  background-color: #2A8DCB;
+  border: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.modal__button:hover {
+  text-shadow: 0 0 10px #001242;
+}
+
+.modal__button:active {
+  background-color: #287FB8;
+  text-shadow: 0 0 10px #001242;
+  box-shadow: 1px 1px 3px 0px #001242 inset;
+}
+
+@keyframes modalUp {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 /* colors */
@@ -206,6 +274,9 @@ button:hover {
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-bottom: 20px;
 }
 
 .card__count {
@@ -325,6 +396,7 @@ button:hover {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   padding: 0 20px 37px;
   margin-left: auto;
@@ -452,4 +524,19 @@ button:hover {
   color: #ffffff;
   background-color: #287FB8;
   margin-right: 10px;
+}
+
+.animate {
+  animation-name: move;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }

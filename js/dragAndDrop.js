@@ -6,7 +6,7 @@ const dragAndDrop = () => {
   const refr = document.querySelector(".refr");
   const food = refr.querySelectorAll(".empty");
 
-  const countingReft = new Refrigerator(10000, ".line--satiety",
+  const countingReft = new Refrigerator(1000, ".line--satiety",
   ".line--mess");
 
   countingReft.init('.food');
