@@ -1,0 +1,30 @@
+@import '../global/_variables'
+    
+.footer 
+    &__wrapper
+        margin: 40px $main-padding-lr 0
+        border-top: 1px solid $main-blue
+        color: $menu-color
+        text-align: center
+        & a
+            color: $menu-color
+            position: relative
+            &:hover
+                &::after
+                   content: 'Github'
+                   position: absolute
+                   display: block 
+                   top: -20px
+                   left: 100%
+                   width: auto
+                   height: auto
+                   padding: 4px
+                   font-size: 12px
+                   background-color: $card-back
+                   z-index: 20
+                   border-radius: 4px
+                   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+@media ( max-width:  1200px)
+    .footer__wrapper
+        margin: 40px $main-padding-laptop-lr 0

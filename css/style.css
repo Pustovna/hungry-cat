@@ -220,6 +220,51 @@ button:hover {
   }
 }
 
+.arrow {
+  position: absolute;
+  left: 150px;
+  top: 180px;
+  z-index: 300;
+  animation: arrowMove;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+}
+
+.arrow__tooltip {
+  position: absolute;
+  top: 0px;
+  left: 80px;
+  font-size: 20px;
+  width: 200px;
+  padding: 10px;
+  background-color: #001242;
+  color: #ffffff;
+  z-index: 20;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .arrow {
+    left: 110px;
+  }
+  .arrow__tooltip {
+    left: 40px;
+  }
+}
+
+@keyframes arrowMove {
+  0% {
+    top: 100px;
+    opacity: 1;
+  }
+  100% {
+    top: 200px;
+    opacity: 0;
+  }
+}
+
 /* colors */
 /* ------------ */
 .menu__wrapper {
@@ -538,5 +583,41 @@ button:hover {
   }
   100% {
     transform: scale(0);
+  }
+}
+
+/* colors */
+/* ------------ */
+.footer__wrapper {
+  margin: 40px 103px 0;
+  border-top: 1px solid rgba(116, 180, 224, 0.3);
+  color: rgba(0, 18, 66, 0.5);
+  text-align: center;
+}
+
+.footer__wrapper a {
+  color: rgba(0, 18, 66, 0.5);
+  position: relative;
+}
+
+.footer__wrapper a:hover::after {
+  content: 'Github';
+  position: absolute;
+  display: block;
+  top: -20px;
+  left: 100%;
+  width: auto;
+  height: auto;
+  padding: 4px;
+  font-size: 12px;
+  background-color: #ffffff;
+  z-index: 20;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 1200px) {
+  .footer__wrapper {
+    margin: 40px 51.5px 0;
   }
 }
